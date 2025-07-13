@@ -3,54 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Animación personalizada para que las estrellas suban en diagonal (45° hacia arriba e izquierda) */
-@keyframes fall {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-100vw, -100vh);
-        opacity: 0;
-    }
+/* Highlight transition for hover cells */
+.highlight-cell {
+    /* use Tailwind’s opacity utilities + transitions */
+    @apply bg-gray-700/30 transition-colors duration-1000 ease-in-out;
 }
-
-.animate-fall {
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.animate-zoomInOut {
-    animation: zoomInOut 20s ease-in-out infinite;
-}
-
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fadeInDown {
-    animation: fadeInDown 1s ease-out forwards;
-}
-
