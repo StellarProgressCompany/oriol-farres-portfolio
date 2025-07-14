@@ -8,3 +8,37 @@
     /* use Tailwind’s opacity utilities + transitions */
     @apply bg-gray-700/30 transition-colors duration-1000 ease-in-out;
 }
+
+/* ─── Animated card border ─── */
+.card-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(130deg, #0ea5e9, #6366f1, #a855f7, #0ea5e9);
+    background-size: 300% 300%;
+    mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+    -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.group:hover .card-glow {
+    opacity: 1;
+    animation: card-glow-animation 6s linear infinite;
+}
+
+@keyframes card-glow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

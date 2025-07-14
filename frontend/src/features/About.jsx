@@ -1,7 +1,9 @@
-// src/features/About.jsx
+// frontend/src/features/About.jsx
 import React from "react";
 import Navbar from "./Navbar.jsx";
 import Skills from "./Skills.jsx";
+import Education from "./Education.jsx";
+import Experience from "./Experience.jsx";
 
 export default function About() {
     return (
@@ -34,24 +36,19 @@ export default function About() {
                         </p>
 
                         <blockquote className="rounded-lg border-l-4 border-sky-600 bg-slate-800/40 p-4 italic">
-                            {`/* Barcelona-born, three years in Ireland—mixing an engineer’s rigor and a hands-on drive to craft meaningful, lasting solutions. */`}
+                            {/* Barcelona-born, three years in Ireland—mixing an engineer’s rigor and a hands-on drive to craft meaningful, lasting solutions. */}
                         </blockquote>
                     </div>
                 </div>
 
-                {/* ─── TECHNOLOGIES ─── */}
-                <div className="container mx-auto px-6 pb-24">
-                    <div className="flex items-center justify-end mb-8">
-                        <div className="flex-1 h-px bg-slate-700 mr-4" />
-                        <h2 className="text-4xl font-extrabold">Technologies.</h2>
-                    </div>
+                {/* ─── SKILLS ─── */}
+                <Skills />
 
-                    <p className="mx-auto mb-10 max-w-2xl text-center text-slate-300">
-                        The tools and languages I use to build and innovate in the digital world.
-                    </p>
+                {/* ─── EDUCATION ─── */}
+                <Education />
 
-                    <Skills />
-                </div>
+                {/* ─── EXPERIENCE ─── */}
+                <Experience />
             </div>
         </>
     );
