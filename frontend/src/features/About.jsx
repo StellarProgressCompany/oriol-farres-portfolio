@@ -5,6 +5,7 @@ import Skills from "./Skills.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import Recommendations from "./Recommendations.jsx";
+import Contact from "./Contact.jsx";          // ← NEW IMPORT
 
 export default function About() {
     return (
@@ -58,6 +59,9 @@ export default function About() {
 
                 {/* ─── RECOMMENDATIONS ─── */}
                 <Recommendations />
+
+                {/* ─── CONTACT FORM ─── */}
+                <Contact />                     {/* ← NEW SECTION */}
             </div>
         </>
     );
