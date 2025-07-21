@@ -43,7 +43,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <section className="relative z-10 bg-slate-900/40 py-24">
+        <section id="skills" className="relative z-10 bg-slate-900/40 py-24">
             <div className="container mx-auto px-6">
                 {/* ─── SECTION TITLE (right-aligned) ─── */}
                 <div className="flex items-center mb-10 justify-end">

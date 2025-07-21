@@ -37,7 +37,7 @@ export default function Contact() {
     );
 
     return (
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-slate-900" id="contact">
             <div className="container mx-auto px-6">
                 {/* ─── SECTION TITLE ─── */}
                 <div className="flex items-center mb-6 justify-end">

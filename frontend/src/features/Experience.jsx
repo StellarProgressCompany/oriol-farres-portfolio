@@ -47,7 +47,7 @@ const experience = [
 
 export default function Experience() {
     return (
-        <section className="bg-slate-900 py-24">
+        <section className="bg-slate-900 py-24" id="experience">
             <div className="container mx-auto px-6">
                 {/* ─── SECTION TITLE (right-aligned) ─── */}
                 <div className="flex items-center mb-10 justify-end">

@@ -72,7 +72,7 @@ export default function Recommendations() {
     return (
         <>
             {/* HEADER STRIP */}
-            <div className="bg-slate-900">
+            <div className="bg-slate-900" id="recommendations">
                 <div className="container mx-auto px-6 py-12 flex items-center">
                     <h2 className="text-4xl font-extrabold text-white">
                         Letters&nbsp;of&nbsp;Recommendation
@@ -130,7 +130,7 @@ export default function Recommendations() {
                         <button
                             onClick={prev}
                             aria-label="Previous letter"
-                            className="absolute left-0 top-1/2 -translate-y-1/2 p-3 text-slate-300 hover:text-white"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 p-3 text-slate-300 hover;text-white"
                         >
                             <FiChevronLeft size={28} />
                         </button>

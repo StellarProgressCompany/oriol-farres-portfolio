@@ -52,7 +52,7 @@ export default function Education() {
     const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
     return (
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-slate-900" id="education">
             <div className="container mx-auto px-6">
                 {/* ─── SECTION TITLE ─── */}
                 <div className="flex items-center mb-10">
