@@ -1,3 +1,4 @@
+# .github/workflows/deploy-frontend.yml
 name: Build & Deploy Frontend to GitHub Pages
 
 on:
@@ -5,34 +6,26 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: read       # allow checkout
-  pages: write         # allow Pages deployment
-  id-token: write      # allow OIDC token for deploy-pages
+  contents: read
+  pages:    write
+  id-token: write
 
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-
       - name: Install & Build Frontend
         working-directory: frontend
         run: |
           npm ci
           npm run build
-          # ensure client‑side routing fallback
           cp dist/index.html dist/404.html
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/dist
 
@@ -44,5 +37,4 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - id: deploy
-        name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
